@@ -1,6 +1,6 @@
 [![Build Status](https://semaphoreci.com/api/v1/alinuxninja/docker-plexpy/branches/master/badge.svg)](https://semaphoreci.com/alinuxninja/docker-plexpy) [![](https://images.microbadger.com/badges/image/alinuxninja/plexpy.svg)](https://microbadger.com/images/alinuxninja/plexpy) [![](https://images.microbadger.com/badges/version/alinuxninja/plexpy.svg)](https://hub.docker.com/r/alinuxninja/plexpy/)
 
-A simple, ready to go container for PlexPy that autoupdates when the container is restarted. Automatically updated each day by [Semaphore CI](https://semaphoreci.com)
+A simple, ready to go container for PlexPy that autoupdates when the container is restarted. Automatically updated each day by [Semaphore CI](https://semaphoreci.com).
 
 ### Running
 ```docker run -d -p 127.0.0.1:80:8181 --name plexpy alinuxninja/plexpy```
