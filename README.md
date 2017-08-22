@@ -6,4 +6,8 @@ A simple, ready to go container for PlexPy that autoupdates when the container i
 
 ### Persistent Volumes
 Run the below command, and add the "app" folder as a volume.
+
 ```docker cp plexpy:/app app```
+
+### SSL/Proxying
+Use [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) along with [JrCs/docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) for LetsEncrypt SSL
