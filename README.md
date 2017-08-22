@@ -2,7 +2,7 @@
 A simple, ready to go container for PlexPy that autoupdates when the container is restarted.
 
 ### Running
-```docker run -d --name plexpy alinuxninja/plexpy```
+```docker run -d -p 127.0.0.1:80:8181 --name plexpy alinuxninja/plexpy```
 
 ### Persistent Volumes
 Run the below command, and add the "app" folder as a volume.
