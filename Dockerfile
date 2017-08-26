@@ -7,8 +7,8 @@ ENV PACKAGES_REQUIRED="\
 ## Install Prerequisites, get PlexPy, and create the plexpy user
 RUN apk add --no-cache git \
 	&& git clone https://github.com/JonnyWong16/plexpy.git /app \
-	&& addgroup -S plexpy \
-	&& adduser -h /app -G plexpy -S plexpy \
+	&& addgroup plexpy \
+	&& adduser -h /app -G plexpy -D -u 1000 plexpy \
 	&& chown -R plexpy:plexpy /app
 
 ## Set Volume
