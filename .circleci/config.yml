@@ -6,15 +6,10 @@ jobs:
       - checkout
       - run:
           name: Get app Version
-          command: |
-            echo $'export APP_VERSION=$(git ls-remote --tags https://github.com/Tautulli/Tautulli.git | grep -v "beta\|{}" | awk -F \'refs/tags/\' \'{print $2}\' | tail -n1)' >> $BASH_ENV
-            source $BASH_ENV
+          command: python fetch_latest_release.py
       - run: 
           name: Build Docker Container
-          command: |
-            echo -n 'App Version: '
-            echo ${APP_VERSION}
-            docker build --build-arg APP_VERSION=${APP_VERSION} -t catdeployed/tautulli:${APP_VERSION} -t catdeployed/tautulli:latest .
+          command: docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
       - run:
           name: Check if version exists
           command: docker pull catdeployed/tautulli:${APP_VERSION} && circleci step halt || true
