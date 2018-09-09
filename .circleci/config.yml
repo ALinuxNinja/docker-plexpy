@@ -36,7 +36,3 @@ workflows:
                 - master
     jobs:
       - build
-  commit:
-    jobs:
-      - build:
-          context: Docker Hub
