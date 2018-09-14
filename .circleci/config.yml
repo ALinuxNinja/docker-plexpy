@@ -6,7 +6,9 @@ jobs:
       - checkout
       - run:
           name: Get app Version
-          command: python fetch_latest_release.py
+          command: |
+            pip install requests
+            python fetch_latest_release.py
       - run: 
           name: Build Docker Container
           command: docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
