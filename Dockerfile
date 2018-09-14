@@ -13,7 +13,7 @@ RUN apk --no-cache add tar \
         && mv Tautulli-* /app \
 	&& addgroup plexpy \
 	&& adduser -h /app -G plexpy -D -u 1000 plexpy \
-	&& chown -R plexpy:plexpy /app
+	&& chown -R plexpy:plexpy /app \
 	&& apk remove tar
 
 ## Set Volume

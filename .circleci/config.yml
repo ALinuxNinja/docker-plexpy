@@ -9,7 +9,6 @@ jobs:
           command: |
             pip install requests
             python fetch_latest_release.py
-            tar xvf current_release.tar.gz
             docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
       - run:
           name: Check if version exists
