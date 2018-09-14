@@ -8,7 +8,7 @@ ENV APP_VERSION $APP_VERSION
 ## Install Prerequisites, get PlexPy, and create the plexpy user
 RUN cd /tmp/ \
 	&& tar xvf current_release.tar.gz \
-	&& rm /tmp/current_release.tar.gz
+	&& rm /tmp/current_release.tar.gz \
         && mv Tautulli-* /app \
 	&& addgroup plexpy \
 	&& adduser -h /app -G plexpy -D -u 1000 plexpy \
