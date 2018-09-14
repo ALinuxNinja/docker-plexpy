@@ -5,14 +5,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Get app Version
+          name: Build Container
           command: |
             pip install requests
             python fetch_latest_release.py
             tar xvf current_release.tar.gz
-      - run: 
-          name: Build Docker Container
-          command: docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
+            docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
       - run:
           name: Check if version exists
           command: docker pull catdeployed/tautulli:${APP_VERSION} && circleci step halt || true
