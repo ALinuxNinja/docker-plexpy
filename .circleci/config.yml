@@ -9,6 +9,7 @@ jobs:
           command: |
             pip install requests
             python fetch_latest_release.py
+            tar xvf current_version.tar.gz
       - run: 
           name: Build Docker Container
           command: docker build --build-arg APP_VERSION=$(cat current_release_version) -t catdeployed/tautulli:$(cat current_release_version) -t catdeployed/tautulli:latest .
