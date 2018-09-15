@@ -1,7 +1,8 @@
 FROM python:2-alpine
+MAINTAINER CatDeployed <dev@catdeployed.com>
 
 ## Get latest version
-ADD current_release.tar.gz /tmp/current_release.tar.gz
+COPY current_release.tar.gz /tmp/current_release.tar.gz
 ARG APP_VERSION
 ENV APP_VERSION $APP_VERSION
 
