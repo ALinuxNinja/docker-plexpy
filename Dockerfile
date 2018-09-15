@@ -15,7 +15,7 @@ RUN apk --no-cache add tar \
 	&& addgroup plexpy \
 	&& adduser -h /app -G plexpy -D -u 1000 plexpy \
 	&& chown -R plexpy:plexpy /app \
-	&& apk remove tar
+	&& apk del tar
 
 ## Set Volume
 VOLUME /app
