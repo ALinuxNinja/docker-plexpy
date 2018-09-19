@@ -6,15 +6,15 @@ COPY current_release.tar.gz /tmp/current_release.tar.gz
 ARG APP_VERSION
 ENV APP_VERSION $APP_VERSION
 
-## Install Prerequisites, get PlexPy, and create the plexpy user
+## Install Prerequisites, get Tautulli, and create the  user
 RUN apk --no-cache add tar \
 	&& cd /tmp/ \
 	&& tar xvf current_release.tar.gz \
 	&& rm /tmp/current_release.tar.gz \
         && mv Tautulli-* /app \
-	&& addgroup plexpy \
-	&& adduser -h /app -G plexpy -D -u 1000 plexpy \
-	&& chown -R plexpy:plexpy /app \
+	&& addgroup app \
+	&& adduser -h /app -G app -D -u 1000 app \
+	&& chown -R app:app /app \
 	&& apk del tar
 
 ## Set Volume
@@ -25,5 +25,5 @@ EXPOSE 8181
 
 ## Set Entrypoint
 ADD entrypoint.sh /entrypoint.sh
-USER plexpy
+USER app
 ENTRYPOINT ["./entrypoint.sh"]
