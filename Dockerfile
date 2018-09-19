@@ -18,8 +18,8 @@ RUN apk --no-cache add tar \
 	&& chown -R app:app /app \
 	&& apk del tar
 
-## Set Volume
-VOLUME /app
+## Set WORKDIR
+WORKDIR /app
 
 ## Set Port
 EXPOSE 8181
