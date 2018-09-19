@@ -1,9 +1,10 @@
-[![Build Status](https://semaphoreci.com/api/v1/alinuxninja/docker-plexpy/branches/master/badge.svg)](https://semaphoreci.com/alinuxninja/docker-plexpy) [![](https://images.microbadger.com/badges/image/alinuxninja/plexpy.svg)](https://microbadger.com/images/alinuxninja/plexpy) [![](https://images.microbadger.com/badges/version/alinuxninja/plexpy.svg)](https://hub.docker.com/r/alinuxninja/plexpy/)
+#### Alpine Linux Container (Default)
+[![](https://images.microbadger.com/badges/image/catdeployed/tautulli:master.svg)](https://hub.docker.com/r/catdeployed/postal/) [![](https://img.shields.io/microbadger/layers/catdeployed/postal/alpine.svg)](https://hub.docker.com/r/catdeployed/tautulli/)
 
-A simple, ready to go container for PlexPy that autoupdates when the container is restarted. Automatically updated each day by [Semaphore CI](https://semaphoreci.com).
+A simple, ready to go container for Tautulli. Automatically updated each day by [CircleCI](https://circleci.com)
 
 ### Running
-```docker run -d -p 127.0.0.1:80:8181 --name plexpy alinuxninja/plexpy```
+```docker run -d -p 127.0.0.1:80:8181 --name plexpy alinuxninja/tautulli```
 
 ### Persistent Volumes
 Run the below command while container is running, and recreate the container with the "app" folder as a volume.
