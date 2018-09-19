@@ -5,4 +5,4 @@ cd /app
 
 ## Startup
 echo "========== Starting PlexPy =========="
-python PlexPy.py
+python PlexPy.py --config /app/.docker/config --datadir /app/.docker/data

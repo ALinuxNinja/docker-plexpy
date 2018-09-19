@@ -12,6 +12,7 @@ RUN apk --no-cache add tar \
 	&& tar xvf current_release.tar.gz \
 	&& rm /tmp/current_release.tar.gz \
         && mv Tautulli-* /app \
+	&& mkdir -p /app/.docker/config /app/.docker/data \
 	&& addgroup app \
 	&& adduser -h /app -G app -D -u 1000 app \
 	&& chown -R app:app /app \
