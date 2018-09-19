@@ -1,5 +1,5 @@
 #### Alpine Linux Container (Default)
-[![](https://images.microbadger.com/badges/image/catdeployed/tautulli:master.svg)](https://hub.docker.com/r/catdeployed/postal/) [![](https://img.shields.io/microbadger/layers/catdeployed/postal/alpine.svg)](https://hub.docker.com/r/catdeployed/tautulli/)
+[![](https://images.microbadger.com/badges/version/catdeployed/tautulli.svg)](https://hub.docker.com/r/catdeployed/postal/) [![](https://images.microbadger.com/badges/image/catdeployed/tautulli.svg)](https://microbadger.com/images/catdeployed/tautulli)
 
 A simple, ready to go container for Tautulli. Automatically updated each day by [CircleCI](https://circleci.com)
 
